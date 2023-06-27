@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- <h1>Todos</h1> -->
+    <nav class="navbar">
+
+        <div class="navbar-title"><%= user.userName %> has <%= left %> thing(s) left to do.</div>
+
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div class="navbar-link">
+            <ul>
+                <li>    <a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <ul>
+    <% todos.forEach( el => { %>
+        <div class="post-it">
+
+            <ul class='todoItem' data-id='<%=el._id%>'>
+                <li><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span></li>
+
+                <li><span>%><%=(el.dateDue)?.toDateString()%></span>%></li>
+                <span class='del'> Remove </span>
+            </ul>
+        </div>
+    <% }) %>
+    </ul>
+
+    <!-- <h2><%= user.userName %> has <%= left %> things left to do.</h2> -->
+
+    <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="date" placeholder="Time due" name='todoDate'>
+        <input type="submit">
+    </form>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
