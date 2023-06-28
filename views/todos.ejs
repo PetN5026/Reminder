@@ -30,9 +30,9 @@
     <% todos.forEach( el => { %>
 
             <div class="post-it">
-                <div class='<%= !el.dateDue  ? 'circle small overdue' : 'circle small'%>'>
+                <div class='<%= new Date(el.dateDue).getTime() >= (new Date().getTime())  ? 'circle small overdue' : 'circle small'%>'>
 
-                    <span>Overdue</span>
+                    <span class="overdue-span">Overdue</span>
                 </div>
                 <ul class='todoItem' data-id='<%=el._id%>'>
                     <li><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span></li>

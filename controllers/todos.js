@@ -4,11 +4,16 @@ module.exports = {
   getTodos: async (req, res) => {
     console.log(req.user);
     try {
-      const todoItems = await Todo.find({ userId: req.user.id });
+      const todoItems = await Todo.find({ userId: req.user.id }).sort({
+        dateDue: 1,
+      });
       const itemsLeft = await Todo.countDocuments({
         userId: req.user.id,
         completed: false,
       });
+      console.log(new Date().getTime());
+      console.log(todoItems[2]?.dateDue.getTime());
+      // console.log(todoItems.dateDue?.toDateString());
       res.render("todos.ejs", {
         todos: todoItems,
         left: itemsLeft,
@@ -20,10 +25,13 @@ module.exports = {
   },
   createTodo: async (req, res) => {
     try {
-      console.log(req.body);
+      const date = new Date(
+        req.body.todoDate.replace("-", "/").replace("-", "/")
+      );
+
       await Todo.create({
         todo: req.body.todoItem,
-        dateDue: req.body.todoDate,
+        dateDue: date,
         completed: false,
         userId: req.user.id,
       });
