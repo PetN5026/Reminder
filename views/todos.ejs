@@ -28,15 +28,20 @@
     </nav>
     <ul>
     <% todos.forEach( el => { %>
-        <div class="post-it">
 
-            <ul class='todoItem' data-id='<%=el._id%>'>
-                <li><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span></li>
+            <div class="post-it">
+                <div class='<%= !el.dateDue  ? 'circle small overdue' : 'circle small'%>'>
 
-                <li><span>%><%=(el.dateDue)?.toDateString()%></span>%></li>
-                <span class='del'> Remove </span>
-            </ul>
-        </div>
+                    <span>Overdue</span>
+                </div>
+                <ul class='todoItem' data-id='<%=el._id%>'>
+                    <li><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span></li>
+
+                    <li><span>DUE %><%=(el.dateDue)?.toDateString()%></span>%></li>
+                    <span class='del'> Remove </span>
+                </ul>
+            </div>
+
     <% }) %>
     </ul>
 
