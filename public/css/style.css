@@ -16,7 +16,8 @@
   text-decoration: underline;
 }
 body {
-  background: #444;
+  background: rgb(219, 209, 197);
+  background-image: url("../imgs/desk.jpeg");
   padding: 0;
   margin: 0;
 }
@@ -86,9 +87,9 @@ h1 {
   position: relative;
 }
 
-h1 {
+/* h1 {
   color: red;
-}
+} */
 .completed {
   text-decoration: line-through;
   color: gray;
@@ -272,6 +273,70 @@ ul > div > ul {
     width: 90%;
   }
 }
+
+/* main page */
+.main-container {
+  position: absolute; /* position the div */
+  top: 50%; /* move the div down by half of its height */
+  left: 50%; /* move the div right by half of its width */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* offset the previous translations by half the div's width and height */
+  width: 60%; /* set the width of the div */
+  height: 350px; /* set the height of the div */
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: saddlebrown;
+  background-color: rgba(255, 255, 255, 0.268);
+}
+.sub--main-title {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main-title {
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 4rem;
+}
+.description {
+  text-align: center;
+  line-height: 1.5rem;
+}
+.main-button-ctn {
+  display: flex;
+}
+
+.main-button {
+  width: 100px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.268);
+  color: saddlebrown;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  border: none;
+  border: saddlebrown 2px solid;
+  text-align: center;
+  margin: 10px 0px;
+  line-height: 35px;
+}
+.main-button:hover {
+  cursor: pointer;
+  background-color: saddlebrown;
+  color: #330033;
+  transition: 0.3s ease-in-out;
+}
+.main-button:active {
+  border-radius: 0.6rem;
+}
+
 /* signup */
 .signup {
   width: 340px;
