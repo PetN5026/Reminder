@@ -272,7 +272,27 @@ ul > div > ul {
     width: 90%;
   }
 }
+/* signup */
+.signup {
+  width: 340px;
+  height: 440px;
+  background: #0c0f0a;
+  margin: auto;
+  margin-top: 180px;
+  padding: 30px;
+  border-top: 4px solid #1293de;
+}
 
+.signup h5 {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-bottom: 1px solid;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
 /* login page */
 .login {
   width: 340px;
