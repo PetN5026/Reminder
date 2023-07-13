@@ -1,44 +1,18 @@
-# Introduction
+# Sticky Sheets
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+Do you have too many sticky notes on your monitor, keep creating more virtually!
+<img src="https://peterjcng.netlify.app/static/media/mock1.999e65af23cddd8e0c9a.png" alt="sticky sheets"/>
 
----
+Link to project: https://reminders-yt4i.onrender.com/
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+**Tech used:**
 
----
+<div alignt="left"><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg" alt="CSS" width="40" height="40"/><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/ExpressJS-Dark.svg" alt="express" width="40" height="40"/><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/HTML.svg" alt="HTML" width="40" height="40"/><img src="https://firebasestorage.googleapis.com/v0/b/foodie-1ba1a.appspot.com/o/icons8-ejs-48.png?alt=media&token=a04bb0c0-799c-49ea-8a76-dd4da155802b" alt="EJS" width="40" height="40"/><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg" alt="CSS" width="40" height="40"/><img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MongoDB.svg" alt="MongoDB" width="40" height="40"/> </div>
 
-# Objectives
+## Optimizations
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+Right now it looks fine on mobile, but can perhaps add a hamburger icon for better user experience.
 
----
+## Lessons Learned:
 
-# Who is this for? 
-
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
-
----
-
-# Packages/Dependencies used 
-
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
-
----
-
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
-
-
+Z-index can be a bit finnicky.
